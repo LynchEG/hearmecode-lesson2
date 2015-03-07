@@ -1,0 +1,31 @@
+##bread = 10
+##peanut_butter = 0
+##jelly = 0
+##sandwhich = 1
+##
+##
+##while bread >= 2 and jelly >= 1 and peanut_butter >= 1:
+##        print "Making sandwich #{0}".format(sandwhich)
+##        bread = bread - 2
+##        sandwhich = sandwhich + 1
+##else:
+##    print "All done; only had enough bread for {0} sandwiches.".format(sandwhich-1)
+
+bread = 2
+peanut_butter = 1
+jelly = 4
+sandwhich = 1
+
+while bread >= 2 and jelly >= 1 and peanut_butter >= 1:
+    print "Making sandwhich #{0}".format(sandwhich)
+    bread = bread -2
+    jelly = jelly - 1
+    peanut_butter = peanut_butter - 1
+    sandwhich = sandwhich + 1
+    print "I have enough bread for {0} more sandwiches, enough peanut butter for {1} more, and enough jelly for {2} more.".format(bread/2, peanut_butter, jelly)
+    if jelly <= peanut_butter and jelly <= bread/2:
+        print "All done; I ran out of jelly."
+    if peanut_butter <=  jelly and peanut_butter <=  bread/2:
+        print "All done; I ran out of peanut butter."
+    if bread/2 <=  jelly and bread/2 <=  peanut_butter:
+        print "All done; I ran out of bread."
